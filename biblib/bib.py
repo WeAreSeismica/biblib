@@ -15,6 +15,11 @@ import textwrap
 
 from . import messages
 
+try:
+    from collections.abc import Iterable as collections_Iterable
+except AttributeError:
+    from collections import Iterable as collections_Iterable
+
 # Match sequences of legal identifier characters, except that the
 # first is not allowed to be a digit (see id_class)
 ID_RE = re.compile('(?![0-9])(?:(?![ \t"#%\'(),={}])[\x20-\x7f])+')
@@ -94,7 +99,7 @@ class Parser:
         if isinstance(str_or_fp_or_iter, str):
             self.__data = str_or_fp_or_iter
             fname = name or '<string>'
-        elif isinstance(str_or_fp_or_iter, collections.Iterable) and \
+        elif isinstance(str_or_fp_or_iter, collections_Iterable) and \
              not hasattr(str_or_fp_or_iter, 'read'):
             for obj in str_or_fp_or_iter:
                 with recoverer:
