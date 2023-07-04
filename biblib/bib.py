@@ -275,9 +275,9 @@ class Parser:
             fields.append((field, value))
             field_pos[field] = self.__pos_factory.offset_to_pos(field_off)
 
-        if key.lower() in self.__entries:
+        if key in self.__entries:
             self._fail('repeated entry')
-        self.__entries[key.lower()] = Entry(fields, typ, key, pos, field_pos)
+        self.__entries[key] = Entry(fields, typ, key, pos, field_pos)
 
     def _scan_field_value(self):
         # See scan_and_store_the_field_value_and_eat_white
