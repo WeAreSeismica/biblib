@@ -2,11 +2,9 @@ Metadata-Version: 2.4
 Name: biblib
 Version: 0.1.0
 Summary: Simple, correct BibTeX parser and algorithms
-Home-page: https://github.com/aclements/biblib
-Author: Austin Clements
 Author-email: Austin Clements <aclements@csail.mit.edu>
 License-Expression: MIT
-Project-URL: Homepage, https://github.com/aclements/biblib
+Project-URL: homepage, https://github.com/aclements/biblib
 Keywords: bibtex,tex
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
@@ -15,11 +13,9 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
 Classifier: Topic :: Database
 Classifier: Topic :: Text Processing
-Requires-Python: >=3.6
+Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
-Dynamic: author
-Dynamic: home-page
 Dynamic: license-file
 
 Biblib provides a simple, standalone Python3 package for parsing

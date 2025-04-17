@@ -2,7 +2,6 @@ LICENSE
 MANIFEST.in
 README.md
 pyproject.toml
-setup.py
 biblib/__init__.py
 biblib/algo.py
 biblib/bib.py
